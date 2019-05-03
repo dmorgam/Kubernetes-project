@@ -2,9 +2,9 @@
 
 #---- Deploy Mysql -------
 
-kubectl create -f wp-mysql.yml
+kubectl create -f wordpress-kube/wp-mysql.yml
 
 
 #---- Deploy Wordpress --
 
-kubectl create -f wp-deploy.yml
+kubectl create -f wordpress-kube/wp-deploy.yml
