@@ -20,11 +20,9 @@ divididos por servicios, wordpress, moodle, django etc...
 + dashboard 
 + storage 
 + ingress
+   
   
----
-  
-  
-El orden de comandos kubectl es este:
+## El orden de comandos kubectl es este:
   
 Secrets & Volumes:
   
