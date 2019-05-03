@@ -6,7 +6,13 @@
 
 ##### Deployments and services #####
 
+# Wordpress
 
+kubectl delete svc wordpress
+kubectl delete svc wordpress-mysql
+
+kubectl delete deployments.apps wordpress
+kubectl delete deployments.apps wordpress-mysql
 
 ##### Volumes #######################
 
