@@ -13,7 +13,12 @@ divididos por servicios, wordpress, moodle, django etc...
 wordpress-deploy.sh
 ...
 
+#### MicroK8s addons ########################
+(Para el despliegue en microk8s)
 
+dns dashboard storage ingress
+
+#############################################
 
 
 El orden de comandos kubectl es este:
