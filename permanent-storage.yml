@@ -15,7 +15,6 @@ spec:
    accessModes:
       - ReadWriteMany
    persistentVolumeReclaimPolicy: Retain
-   storageClassName: local-storage
    hostPath:
       path: "/kube-storage"
 
