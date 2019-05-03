@@ -6,23 +6,13 @@ kind: PersistentVolume
 metadata:
   name: volume-1
 spec:
+  storageClassName: local-storage
   capacity:
     storage: 20Gi
   accessModes:
-  - ReadWriteMany
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
-  local:
-    path: /kube-storage
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - kubernetes-master
-
+    - ReadWriteMany
+  hostPath:
+    path: "/kube-storage"
 ---
 
 #------- Volume claims ---------------------------------
