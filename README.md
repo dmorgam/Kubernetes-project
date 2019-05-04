@@ -1,11 +1,8 @@
 
 ## Despliege de varios containers en kubernetes para mi proyecto de ASIR
   
-Antes de nada, es necesario crear la estructura de directorios:
-
-/kube-storage/  
- ├── wp-mysql/   
- ├── wp-static/   
+Los directorios con los volume claims de microk8s están en esta ruta:
++ /var/snap/microk8s/common/default-storage/
 
 Teniendo todo el directorio y subdirectorios con permisos suficientes,
 en pruebas con microk8s con 777 de permisos.
