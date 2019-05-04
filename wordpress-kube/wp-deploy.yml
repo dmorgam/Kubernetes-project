@@ -17,7 +17,7 @@ spec:
 
 # Deployment of wordpress
 
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wordpress
@@ -38,7 +38,7 @@ spec:
         tier: webapp
     spec:
       containers:
-      - image: wordpress:4.8-apache
+      - image: wordpress:5.1-apache
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
