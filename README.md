@@ -3,7 +3,7 @@
   
 Antes de nada, es necesario crear la estructura de directorios:
 
-/kube-storage  
+/kube-storage/  
  ├── wp-mysql/   
  ├── wp-static/   
 
