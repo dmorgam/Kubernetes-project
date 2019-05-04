@@ -1,6 +1,15 @@
 
 ## Despliege de varios containers en kubernetes para mi proyecto de ASIR
   
+Antes de nada, es necesario crear la estructura de directorios:
+
+/kube-storage/
+     |
+     +-- wp-mysql/
+     +-- wp-static/
+
+Teniendo todo el directorio y subdirectorios permisos suficientes,
+en pruebas con microk8s basta con 777.
   
 Este script crea un volumen en kubernetes y varios volume claims,
 además crea todos los secrets usados en el despliege.

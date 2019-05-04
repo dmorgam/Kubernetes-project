@@ -4,18 +4,31 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: volume-1
+  name: volume-wordpress
 spec:
-  storageClassName: microk8s-hostpath
   capacity:
-    storage: 20Gi
+    storage: 2Gi
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: "/kube-storage"
+    path: "/kube-storage/wp-static"
 ---
 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-wp-mysql
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/kube-storage/wp-mysql"
+
+---
 #------- Volume claims ---------------------------------
+
 
 
 
@@ -31,14 +44,13 @@ spec:
   accessModes:
     - ReadWriteOnce
   volumeMode: Filesystem
-  storageClassName: microk8s-hostpath
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
 
 ---
 
-#------- Wordpress (base de datos) ---------------------
+#------- Wordpress (datos) ---------------------
 
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -50,7 +62,6 @@ spec:
   accessModes:
     - ReadWriteOnce
   volumeMode: Filesystem
-  storageClassName: microk8s-hostpath
   resources:
     requests:
-      storage: 1Gi
+      storage: 2Gi
