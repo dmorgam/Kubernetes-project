@@ -7,8 +7,8 @@ Antes de nada, es necesario crear la estructura de directorios:
  ├── wp-mysql/   
  ├── wp-static/   
 
-Teniendo todo el directorio y subdirectorios permisos suficientes,
-en pruebas con microk8s basta con 777.
+Teniendo todo el directorio y subdirectorios con permisos suficientes,
+en pruebas con microk8s con 777 de permisos.
   
 Este script crea un volumen en kubernetes y varios volume claims,
 además crea todos los secrets usados en el despliege.
