@@ -28,14 +28,14 @@ spec:
   selector:
     matchLabels:
       app: wordpress
-      tier: frontend
+      tier: webapp
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: wordpress
-        tier: frontend
+        tier: webapp
     spec:
       containers:
       - image: wordpress:4.8-apache
