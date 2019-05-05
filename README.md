@@ -1,6 +1,8 @@
 
 ## Despliege de varios containers en kubernetes para mi proyecto de ASIR
   
+El despliege se hará sobre microk8s para la demostración.
+  
 Los directorios con los volume claims de microk8s están en esta ruta:
 + /var/snap/microk8s/common/default-storage/
 
