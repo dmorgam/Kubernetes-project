@@ -9,6 +9,5 @@ kubectl create -f permanent-storage.yml
 
 #---- Setup Secrets ------
 
-kubectl create -f wordpress-kube/wp-secrets.yml
-
+sh wordpress-kube/wp-secrets.sh
 
