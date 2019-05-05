@@ -34,7 +34,7 @@ divididos por servicios, wordpress, moodle, django etc...
 Secrets & Volumes:
   
 + kubectl create -f permanent-storage.yml
-+ kubectl create -f wordpress-kube/wp-secrets.yml
++ sh wordpress-kube/wp-secrets.sh
   
   
 Deployments:
