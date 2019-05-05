@@ -1,39 +1,18 @@
 
 #------- Volumen en el HDD local (pruebas) -------------
 
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: volume-wordpress
-  labels:
-    app: wordpress
-    tier: webapp
-spec:
-  capacity:
-    storage: 2Gi
-  accessModes:
-    - ReadWriteMany
+# No se crearán volumenes ya que se usará para las 
+# pruebas la clase de almacenamientod de microk8s
+# de forma que se definirán solo los volume claims
+# internamente creados por microk8s en:
+# 
+# /var/snap/microk8s/common/default-storage/
+#
+# Para un posterior despliege en la nube se definirá el
+# volumen y clase correspondientes.
 
----
 
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: volume-wp-mysql
-  labels:
-    app: wordpress
-    tier: mysql
-spec:
-  capacity:
-    storage: 2Gi
-  accessModes:
-    - ReadWriteMany
-
----
 #------- Volume claims ---------------------------------
-
-
-
 
 #------- Wordpress (base de datos) ---------------------
 
