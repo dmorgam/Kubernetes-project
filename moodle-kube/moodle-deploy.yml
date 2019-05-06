@@ -52,13 +52,13 @@ spec:
           value: root
         - name: MOODLE_DATABASE_NAME
           value: moodle  
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
         - name: MOODLE_DB_PASSWORD
           valueFrom:
             secretKeyRef:
               name: moodledb-pass
               key: password
-        - name: ALLOW_EMPTY_PASSWORD
-          value: yes
         ports:
         - containerPort: 80
           name: moodle-http
