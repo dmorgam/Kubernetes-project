@@ -50,8 +50,6 @@ spec:
           value: root
         - name: MOODLE_DATABASE_NAME
           value: moodle  
-        - name: ALLOW_EMPTY_PASSWORD
-          value: "yes"
         - name: MOODLE_DATABASE_PASSWORD
           valueFrom:
             secretKeyRef:
