@@ -46,8 +46,6 @@ spec:
         env:
         - name: MARIADB_HOST
           value: moodle-mariadb
-        - name: MARIADB_PORT_NUMBER
-          value: "3306"
         - name: MOODLE_DATABASE_USER
           value: root
         - name: MOODLE_DATABASE_NAME
