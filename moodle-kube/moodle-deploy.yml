@@ -41,7 +41,7 @@ spec:
         tier: moodle
     spec:
       containers:
-              - image: bitnami/moodle:3-debian-9
+      - image: bitnami/moodle:3-debian-9
         name: moodle
         env:
         - name: MARIADB_HOST
