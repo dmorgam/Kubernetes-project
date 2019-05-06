@@ -52,7 +52,7 @@ spec:
           value: moodle  
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
-        - name: MOODLE_DB_PASSWORD
+        - name: MOODLE_DATABASE_PASSWORD
           valueFrom:
             secretKeyRef:
               name: moodledb-pass
