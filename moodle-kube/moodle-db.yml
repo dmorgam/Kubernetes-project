@@ -1,0 +1,61 @@
+# Service for Moodle mariadb
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: moodle-mariadb
+  labels:
+    app: moodle
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: moodle
+    tier: mariadb
+  clusterIP: None
+
+---
+
+# Deployment of mariadb
+
+apiVersion:  apps/v1
+kind: Deployment
+metadata:
+  name: moodle-mariadb
+  labels:
+    app: moodle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moodle
+      tier: mariadb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: moodle
+        tier: mariadb
+    spec:
+      containers:
+              - image: mariadb:10.4
+        name: mariadb
+        env:
+        - name: MYSQL_DATABASE
+          value: moodle
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: moodledb-pass
+              key: password
+        ports:
+        - containerPort: 3306
+          name: mariadb
+        volumeMounts:
+        - name: volume-moodle-db
+          mountPath: "/var/lib/mysql"
+      volumes:
+      - name: volume-moodle-db
+        persistentVolumeClaim:
+          claimName: volume-moodle-db
