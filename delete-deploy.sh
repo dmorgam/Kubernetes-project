@@ -10,9 +10,13 @@
 
 kubectl delete svc wordpress
 kubectl delete svc wordpress-mysql
+kubectl delete svc moodle-mariadb
+kubectl delete svc moodle
 
 kubectl delete deployments.apps wordpress
 kubectl delete deployments.apps wordpress-mysql
+kubectl delete deployments.apps moodle
+kubectl delete deployments.apps moodle-mariadb
 
 ##### Volumes #######################
 
