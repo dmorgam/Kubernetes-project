@@ -57,6 +57,8 @@ spec:
             secretKeyRef:
               name: moodledb-pass
               key: password
+        - name: ALLOW_EMPTY_PASSWORD
+          value: yes
         ports:
         - containerPort: 80
           name: moodle-http
