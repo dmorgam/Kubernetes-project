@@ -8,7 +8,9 @@ metadata:
 spec:
   ports:
     - port: 80
+      name: mod-80
     - port: 443
+      name: mod-443
   selector:
     app: moodle
     tier: moodle
