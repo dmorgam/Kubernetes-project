@@ -16,7 +16,8 @@ Despues se ejecutan los scripts que lanzan los deployments, estan
 divididos por servicios, wordpress, moodle, django etc...
   
 + wordpress-deploy.sh
-  
++ moodle-deploy.sh
+ 
   
 ## MicroK8s addons
 (Para el despliegue en microk8s)
