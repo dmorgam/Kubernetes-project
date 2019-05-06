@@ -33,7 +33,7 @@ Secrets & Volumes:
   
 + kubectl create -f permanent-storage.yml
 + sh wordpress-kube/wp-secrets.sh
-  
++ sh moodle-kube/moodle-secrets.sh  
   
 Deployments:
   
