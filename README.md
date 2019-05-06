@@ -37,6 +37,8 @@ Secrets & Volumes:
   
 Deployments:
   
-+ kubectl create -f wp-mysql.yml
-+ kubectl create -f wp-deploy.yml
++ kubectl create -f wordpress-kube/wp-mysql.yml
++ kubectl create -f wordpress-kube/wp-deploy.yml
++ kubectl create -f moodle-kube/moodle-db.yml
++ kubectl create -f moodle-kube/moodle-deploy.yml
   
