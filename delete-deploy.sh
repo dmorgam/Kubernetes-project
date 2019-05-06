@@ -19,8 +19,11 @@ kubectl delete deployments.apps wordpress-mysql
 kubectl delete pvc volume-wordpress
 kubectl delete pvc volume-wp-mysql
 
+kubectl delete pvc volume-moodle
+kubectl delete pvc volume-moodle-db
 
 ##### Secrets ######################
 
-kubectl delete secrets  mysql-pass
+kubectl delete secrets  wp-mysql-pass
+kubectl delete secrets  moodledb-pass
 

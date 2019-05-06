@@ -2,5 +2,5 @@
 
 #Creación de secret via kubectl y literal, ya que mediante yaml no se configura correctamente
 
-MYSQL_PASS=Auv83Mkr
-kubectl create secret generic wp-mysql-pass --from-literal=password=$MYSQL_PASS
+DB_PASS=Auv83Mkr
+kubectl create secret generic moodledb-pass --from-literal=password=$DB_PASS

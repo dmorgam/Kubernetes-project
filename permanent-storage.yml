@@ -47,3 +47,40 @@ spec:
   resources:
     requests:
       storage: 2Gi
+
+---
+
+#------ Moodle (datos) --------------------------
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: volume-moodle
+  labels:
+    app: moodle
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 2Gi
+
+---
+
+#------ Moodle (database) --------------------------
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: volume-moodle-db
+  labels:
+    app: moodle
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 2Gi
+
