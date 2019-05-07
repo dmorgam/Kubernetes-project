@@ -12,7 +12,6 @@ spec:
       name: madb-3306
   selector:
     app: moodle
-    tier: mariadb
   clusterIP: None
 
 ---
@@ -30,14 +29,12 @@ spec:
   selector:
     matchLabels:
       app: moodle
-      tier: mariadb
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: moodle
-        tier: mariadb
     spec:
       containers:
       - image: mariadb:10.4

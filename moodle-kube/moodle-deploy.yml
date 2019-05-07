@@ -13,7 +13,6 @@ spec:
       name: moodle-ssl
   selector:
     app: moodle
-    tier: webapp
   type: ClusterIP
   
 ---
@@ -31,14 +30,12 @@ spec:
   selector:
     matchLabels:
       app: moodle
-      tier: webapp
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: moodle
-        tier: webapp
     spec:
       containers:
       - image: bitnami/moodle:3-debian-9
