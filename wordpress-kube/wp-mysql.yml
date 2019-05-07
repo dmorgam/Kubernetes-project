@@ -8,11 +8,11 @@ metadata:
     app: wordpress
 spec:
   ports:
-    - port: 3306
+    - name: mysql
+      port: 3306
+      targetPort: 3306
   selector:
-    app: wordpress
-    tier: mysql
-  clusterIP: None
+    app: wordpress-mysql
 
 ---
 
@@ -28,15 +28,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wordpress
-      tier: mysql
+      app: wordpress-mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: wordpress
-        tier: mysql
     spec:
       containers:
       - image: mysql:5.7
