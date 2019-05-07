@@ -11,7 +11,7 @@ spec:
     - port: 3306
   selector:
     app: moodle
-    tier: madb
+    tier: mysql
   clusterIP: None
 
 ---
@@ -24,23 +24,23 @@ metadata:
   name: moodle-mariadb
   labels:
     app: moodle
-    tier: madb
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: moodle
-      tier: madb
+      tier: mysql
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: moodle
+        tier: mysql
     spec:
       containers:
       - image: mariadb:10.4
-        name: mariadb
+        name: mysql
         env:
         - name: MYSQL_DATABASE
           value: moodle
