@@ -6,12 +6,15 @@
 
 ##### Deployments and services #####
 
-# Wordpress
+# Services
 
 kubectl delete svc wordpress
 kubectl delete svc wordpress-mysql
 kubectl delete svc moodle-mariadb
 kubectl delete svc moodle
+kubectl delete svc moodle-loadbalancer
+
+# Deployments
 
 kubectl delete deployments.apps wordpress
 kubectl delete deployments.apps wordpress-mysql
