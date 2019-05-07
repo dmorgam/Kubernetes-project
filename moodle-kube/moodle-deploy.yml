@@ -62,7 +62,7 @@ spec:
           name: moodle-ssl
         volumeMounts:
         - name: volume-moodle
-          mountPath: "/var/www/html"
+          mountPath: "/bitnami"
       volumes:
       - name: volume-moodle
         persistentVolumeClaim:
