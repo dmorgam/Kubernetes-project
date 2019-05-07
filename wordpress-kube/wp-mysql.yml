@@ -5,7 +5,7 @@ kind: Service
 metadata:
   name: wordpress-mysql
   labels:
-    app: wordpress
+    app: wordpress-mysql
 spec:
   ports:
     - name: mysql
@@ -23,7 +23,7 @@ kind: Deployment
 metadata:
   name: wordpress-mysql
   labels:
-    app: wordpress
+    app: wordpress-mysql
 spec:
   replicas: 1
   selector:
@@ -34,7 +34,7 @@ spec:
   template:
     metadata:
       labels:
-        app: wordpress
+        app: wordpress-mysql
     spec:
       containers:
       - image: mysql:5.7
