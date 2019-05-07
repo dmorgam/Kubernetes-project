@@ -10,6 +10,3 @@ kubectl create -f moodle-kube/moodle-db.yml
 kubectl create -f moodle-kube/moodle-deploy.yml
 
 
-#---- Deploy load balancer ---
-
-kubectl create -f moodle-kube/moodle-loadbalancer.yml
