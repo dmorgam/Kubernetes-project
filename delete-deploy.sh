@@ -12,6 +12,8 @@ kubectl delete svc wordpress
 kubectl delete svc wordpress-mysql
 kubectl delete svc moodle-mariadb
 kubectl delete svc moodle
+kubectl delete svc moodle-nodeport
+kubectl delete svc wordpress-nodeport
 
 # Deployments
 

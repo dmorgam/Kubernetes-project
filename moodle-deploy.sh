@@ -9,4 +9,6 @@ kubectl create -f moodle-kube/moodle-db.yml
 
 kubectl create -f moodle-kube/moodle-deploy.yml
 
+#---- Node Port --------------
 
+kubectl expose service moodle --type=NodePort --name=moodle-nodeport
