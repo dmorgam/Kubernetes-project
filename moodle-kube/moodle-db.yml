@@ -24,6 +24,9 @@ metadata:
     app: moodle-mariadb
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: moodle-mariadb
   strategy:
     type: Recreate
   template:
