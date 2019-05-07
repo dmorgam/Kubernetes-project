@@ -9,7 +9,6 @@ metadata:
 spec:
   ports:
     - port: 3306
-      targetPort: db-port
   selector:
     app: moodle
     tier: mysql
@@ -51,9 +50,7 @@ spec:
               name: moodledb-pass
               key: password
         ports:
-        - name: db-port
-          containerPort: 3306
-          targetPort: 3306
+        - containerPort: 3306
         volumeMounts:
         - name: volume-moodle-db
           mountPath: "/var/lib/mysql"
