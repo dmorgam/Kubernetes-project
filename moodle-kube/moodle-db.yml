@@ -52,7 +52,7 @@ spec:
               key: password
         ports:
         - containerPort: 3306
-          name: mariadb
+          name: madb-3306
         volumeMounts:
         - name: volume-moodle-db
           mountPath: "/var/lib/mysql"

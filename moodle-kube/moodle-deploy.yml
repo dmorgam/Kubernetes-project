@@ -8,12 +8,12 @@ metadata:
 spec:
   ports:
     - port: 80
-      name: mod-80
+      name: moodle-http
     - port: 443
-      name: mod-443
+      name: moodle-ssl
   selector:
     app: moodle
-    tier: moodle
+    tier: webapp
   type: ClusterIP
   
 ---
@@ -31,14 +31,14 @@ spec:
   selector:
     matchLabels:
       app: moodle
-      tier: moodle
+      tier: webapp
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: moodle
-        tier: moodle
+        tier: webapp
     spec:
       containers:
       - image: bitnami/moodle:3-debian-9
