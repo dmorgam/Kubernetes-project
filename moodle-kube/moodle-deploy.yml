@@ -7,10 +7,7 @@ metadata:
     app: moodle
 spec:
   ports:
-    - port: 80
-      name: moodle-http
     - port: 443
-      name: moodle-ssl
   selector:
     app: moodle
     tier: webapp
@@ -56,10 +53,7 @@ spec:
               name: moodledb-pass
               key: password
         ports:
-        - containerPort: 80
-          name: moodle-http
         - containerPort: 443
-          name: moodle-ssl
         volumeMounts:
         - name: volume-moodle
           mountPath: "/bitnami"
