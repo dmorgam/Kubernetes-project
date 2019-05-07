@@ -13,6 +13,7 @@ spec:
       name: moodle-ssl
   selector:
     app: moodle
+    tier: mood
   type: ClusterIP
   
 ---
@@ -25,11 +26,13 @@ metadata:
   name: moodle
   labels:
     app: moodle
+    tier: mood
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: moodle
+      tier: mood
   strategy:
     type: Recreate
   template:

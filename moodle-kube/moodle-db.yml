@@ -9,9 +9,9 @@ metadata:
 spec:
   ports:
     - port: 3306
-      name: madb-3306
   selector:
     app: moodle
+    tier: madb
   clusterIP: None
 
 ---
@@ -24,11 +24,13 @@ metadata:
   name: moodle-mariadb
   labels:
     app: moodle
+    tier: madb
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: moodle
+      tier: madb
   strategy:
     type: Recreate
   template:
@@ -49,7 +51,6 @@ spec:
               key: password
         ports:
         - containerPort: 3306
-          name: madb-3306
         volumeMounts:
         - name: volume-moodle-db
           mountPath: "/var/lib/mysql"
