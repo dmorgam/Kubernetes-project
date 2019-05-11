@@ -34,7 +34,7 @@ Tambien es necesario instalar docker en local para construir la imágen.
   
 Build Moodle Image:
 
-+ sh build-moodle-docker.sh
++ sudo sh build-moodle-docker.sh
 
 Secrets & Volumes:
   
