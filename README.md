@@ -26,10 +26,16 @@ divididos por servicios, wordpress, moodle, django etc...
 + dashboard 
 + storage 
 + ingress
-   
++ registry   
   
+Tambien es necesario instalar docker en local para construir la imágen.
+
 ## El orden de comandos kubectl es este:
   
+Build Moodle Image:
+
++ sh build-moodle-docker.sh
+
 Secrets & Volumes:
   
 + kubectl create -f permanent-storage.yml
