@@ -7,7 +7,7 @@ metadata:
     app: moodle
 spec:
   ports:
-    - port: 443
+    - port: 80
   selector:
     app: moodle
   type: ClusterIP
@@ -35,25 +35,13 @@ spec:
         app: moodle
     spec:
       containers:
-      - image: bitnami/moodle:3-debian-9
+      - image: moodle_image:local
         name: moodle
-        env:
-        - name: MARIADB_HOST
-          value: moodle-mariadb
-        - name: MOODLE_DATABASE_USER
-          value: root
-        - name: MOODLE_DATABASE_NAME
-          value: moodle  
-        - name: MOODLE_DATABASE_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: moodledb-pass
-              key: password
         ports:
-        - containerPort: 443
+        - containerPort: 80
         volumeMounts:
         - name: volume-moodle
-          mountPath: "/bitnami"
+          mountPath: "/var/www"
       volumes:
       - name: volume-moodle
         persistentVolumeClaim:
