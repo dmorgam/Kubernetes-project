@@ -34,6 +34,8 @@ spec:
       labels:
         app: moodle
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
       - image: moodle_image:local
         name: moodle
