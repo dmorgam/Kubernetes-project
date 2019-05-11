@@ -23,9 +23,7 @@ divididos por servicios, wordpress, moodle, django etc...
 (Para el despliegue en microk8s)
   
 + dns 
-+ dashboard 
 + storage 
-+ ingress
 + registry   
   
 Tambien es necesario instalar docker en local para construir la imágen.
