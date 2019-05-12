@@ -12,4 +12,5 @@ RUN chown -R www-data:www-data /var/www
 USER www-data
 RUN cd /var/www/html && wget https://download.moodle.org/download.php/direct/stable36/moodle-latest-36.tgz
 RUN cd /var/www/html && tar xvzf moodle-latest-36.tgz
+USER root
 EXPOSE 80
