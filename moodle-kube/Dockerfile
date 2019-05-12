@@ -1,5 +1,5 @@
 FROM php:7.3-apache
-RUN apt update && apt install wget zlib1g-dev libpng-dev libicu-dev g++ libxml2-dev libpcre3-dev
+RUN apt-get update && apt-get install -y wget zlib1g-dev libpng-dev libicu-dev g++ libxml2-dev libpcre3-dev
 RUN docker-php-ext-install pdo_mysql && docker-php-ext-enable pdo_mysql
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 RUN docker-php-ext-install zip && docker-php-ext-enable zip
